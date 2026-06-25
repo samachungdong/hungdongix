@@ -905,12 +905,12 @@
         box-shadow 0.5s ease;
     }
 
-    /* Active (center) slide: full size, sharp, bright, with gold glow */
+    /* Active (center) slide: full size, sharp, bright — no border/outline */
     .highlightSwiper .swiper-slide-active {
       transform: scale(1.02);
       opacity: 1;
       filter: brightness(1) blur(0px);
-      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.65), 0 0 0 2px rgba(212, 175, 55, 0.3);
+      /* box-shadow removed: no border or glow on active slide */
       z-index: 2;
     }
 
@@ -922,12 +922,12 @@
       filter: brightness(0.58) blur(1px);
     }
 
-    /* Image inside each slide */
+    /* Image inside each slide — height limited for Google Sites iframe compatibility */
     .highlightSwiper .swiper-slide img {
       width: 100%;
-      height: 58vh;
-      max-height: 520px;
-      min-height: 220px;
+      height: 340px;         /* Fixed height so it fits well inside Google Sites iframe */
+      max-height: 340px;
+      min-height: 180px;
       object-fit: cover;
       display: block;
       border-radius: 14px;
@@ -936,26 +936,13 @@
       pointer-events: none; /* Prevent image drag from interfering with swiper */
     }
 
-    /* Caption: gradient overlay at bottom of each slide, only visible when active */
+    /* Caption hidden per user request — titles removed from the UI */
     .slide-caption {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      background: linear-gradient(0deg, rgba(10, 19, 34, 0.92) 0%, rgba(10, 19, 34, 0.4) 55%, transparent 100%);
-      color: var(--gold-300);
-      font-family: var(--font-display);
-      font-size: 1.05rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      padding: 34px 24px 18px;
-      border-radius: 0 0 14px 14px;
-      opacity: 0;
-      transition: opacity 0.35s ease;
+      display: none;
     }
 
     .highlightSwiper .swiper-slide-active .slide-caption {
-      opacity: 1;
+      display: none;
     }
 
     /* Navigation arrows: gold-themed to match the site's aesthetic */
@@ -1261,28 +1248,115 @@
       <div class="swiper highlightSwiper" id="highlightSwiper">
         <div class="swiper-wrapper">
 
-          <!-- Slide 1: Lửa Thiêng & Thánh Thể -->
+          <!-- ===== GROUP 1: Lửa Thiêng & Thánh Thể (slides 0–8) ===== -->
+          <!-- Card 0 click → jumps to slide index 0 -->
           <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1DDUPjooRkdNOCfqRqGCBKkHl_O1kkBkb" alt="Lửa Thiêng &amp; Thánh Thể" loading="lazy">
-            <div class="slide-caption">Lửa Thiêng &amp; Thánh Thể</div>
+            <img src="https://lh3.googleusercontent.com/d/1f2NWS5Z72RGZt8SJpaifx5FUlzf7fHYO" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1LTmumYDTXRLDbXg16Tq3T6MJHGT-arzc" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/11NA4VDUvGZIfBwmr-L4rfSvjUV8-Hv4U" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/13NuJeBVCjGp9pfsXuqJ6fqrEVcTHWE6I" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1Vs_TYvUPkc5rKZ2cKjkSlzXOVqKHkgic" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1oIuJLFs7DGyZ_-LcRx7xKBoykqOfuSwG" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/19Aany77c-ARNRB2fM6ECoCbAuflC5H2S" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1sT0AGbY51VtV7PZZkdvZVwocTF-6K-G-" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/18roSdRUXfcTJikqzMeYfHnsEHFfqmzvI" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
           </div>
 
-          <!-- Slide 2: Học Tập & Rèn Luyện -->
+          <!-- ===== GROUP 2: Học Tập & Rèn Luyện (slides 9–18) ===== -->
+          <!-- Card 1 click → jumps to slide index 9 -->
           <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1kOUp6XoqWgny8a80JilSfw2KbPe7DbGY" alt="Học Tập &amp; Rèn Luyện" loading="lazy">
-            <div class="slide-caption">Học Tập &amp; Rèn Luyện</div>
+            <img src="https://lh3.googleusercontent.com/d/1J8V3E4CqLAraJcLeHUisruukwT0gh2dx" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1uo4LDo7CrsvKojD5cFPdci94OINhb4ps" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1JQ39uIwhN7QhF5OVeHDSi5dGkhdom0Nm" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1iW0pbQ45zAzzY1d8VGSvmWOOpBeV3tpz" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1VwUubRIMZOT27hUPiN_0VSYnqFxwo6Yq" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/11uDSTmLfAms1_p3wjTtttsRTWy84RPhC" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1Yd5T95fC-05h0b-y-E5ZWHKlD8hR0bmj" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1ntjZen1GreMTa8IrZs5Xv520804ZR2li" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1xJly5kDf4otmGgIKnnAyRSg9aoHxVas7" alt="Học Tập & Rèn Luyện" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/138pN9aUrUycxfKXLYC8c837m2NaHnD5R" alt="Học Tập & Rèn Luyện" loading="lazy">
           </div>
 
-          <!-- Slide 3: Hoạt Động & Thử Thách -->
+          <!-- ===== GROUP 3: Hoạt Động & Thử Thách (slides 19–33) ===== -->
+          <!-- Card 2 click → jumps to slide index 19 -->
           <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/13V0Dir9dOzJWWbXRa1orBin9cjZSJJdm" alt="Hoạt Động &amp; Thử Thách" loading="lazy">
-            <div class="slide-caption">Hoạt Động &amp; Thử Thách</div>
+            <img src="https://lh3.googleusercontent.com/d/1DDUPjooRkdNOCfqRqGCBKkHl_O1kkBkb" alt="Hoạt Động & Thử Thách" loading="lazy">
           </div>
-
-          <!-- Slide 4: Hành Trình Hừng Đông -->
           <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1UJZ7FBQCk7NnWJ6zjgKxeFw4tSQ8Ws2T" alt="Hành Trình Hừng Đông" loading="lazy">
-            <div class="slide-caption">Hành Trình Hừng Đông</div>
+            <img src="https://lh3.googleusercontent.com/d/1kOUp6XoqWgny8a80JilSfw2KbPe7DbGY" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/13V0Dir9dOzJWWbXRa1orBin9cjZSJJdm" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1UJZ7FBQCk7NnWJ6zjgKxeFw4tSQ8Ws2T" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1LB_Q_QgiblntkoA1gCyiFUtz52MtNHOb" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1kysnyTDHFWlUgxAa9SV7F_PfC4nNUjj1" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1oHTJ-jLtEQbttds3oDuzJyCiX2lra5i3" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1KgAuBRt6QqTbmHe5yjf5_TOIAoBlrjsQ" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1860lG4M3DiqQGaxPWVH7Xiiig0tQO_75" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1HbNPWKo5YkOSAnNlvTIcKJSBp6EVN3wF" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1wP9wQH_OJEaiFaF1JStnSZ10qNjYy7gC" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/15r1EfuPJEHotMLQt_MoG3oGTZ7S97IRC" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1-f3-HYz9wa0HRZD4cr-b4PPBjX2tFz-X" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/140LFs-ig0RHePHcFeFc5dcWI4C-1Ktlx" alt="Hoạt Động & Thử Thách" loading="lazy">
+          </div>
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1xdFKhNivwR0aGM8tVTAh2iYHeYx6qq3M" alt="Hoạt Động & Thử Thách" loading="lazy">
           </div>
 
         </div>
@@ -1429,10 +1503,13 @@
       },
     });
 
-    // Open modal and immediately jump (0ms) to the slide matching the clicked card
+    // Map each highlight card to the first slide index of its photo group:
+    // Card 0 (Lửa Thiêng) → slides 0–8  |  Card 1 (Học Tập) → slides 9–18  |  Card 2 (Hoạt Động) → slides 19–33
+    const cardStartIndices = [0, 9, 19];
     cards.forEach(function (card, idx) {
       card.addEventListener('click', function () {
-        highlightSwiper.slideToLoop(idx, 0); // Jump without animation before modal opens
+        const startSlide = cardStartIndices[idx] !== undefined ? cardStartIndices[idx] : 0;
+        highlightSwiper.slideToLoop(startSlide, 0); // Jump without animation before modal opens
         modal.classList.add('is-open');
         document.body.style.overflow = 'hidden'; // Lock background scroll
       });
