@@ -4,13 +4,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Favicon: sử dụng logo của Xứ Đoàn từ Google Drive -->
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/d/1yFlmj2W8BQt0PSenXdyj-G37IuCK652L">
+  <link rel="apple-touch-icon" href="https://lh3.googleusercontent.com/d/1yFlmj2W8BQt0PSenXdyj-G37IuCK652L">
+
   <title>Hừng Đông IX — Mật Lệnh Bình An</title>
 
-  <meta name="description" content="Register your product warranty quickly and easily with Blueport.">
+  <meta name="description"
+    content="Trang đăng ký tham gia Sa mạc thiếu nhi Hừng Đông IX — Mật Lệnh Bình An của Xứ Đoàn Carlo Acutis, Giáo xứ Thánh Phanxicô Xaviê. Diễn ra từ ngày 31/07 đến 02/08/2026 tại Giáo xứ Thiện Lộc.">
 
+  <!-- Open Graph Meta Tags -->
   <meta property="og:title" content="Hừng Đông IX — Mật Lệnh Bình An">
-  <meta property="og:description" content="Sa mạc">
+  <meta property="og:description"
+    content="Trang đăng ký tham gia Sa mạc thiếu nhi Hừng Đông IX — Mật Lệnh Bình An của Xứ Đoàn Carlo Acutis, Giáo xứ Thánh Phanxicô Xaviê. Diễn ra từ ngày 31/07 đến 02/08/2026 tại Giáo xứ Thiện Lộc.">
   <meta property="og:image" content="https://lh3.googleusercontent.com/d/1yFlmj2W8BQt0PSenXdyj-G37IuCK652L">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
 
   <!-- Google Fonts & Bootstrap -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -263,7 +273,8 @@
       height: 100%;
       display: flex;
       flex-direction: column;
-      cursor: pointer; /* Cards are clickable to open the image modal */
+      cursor: pointer;
+      /* Cards are clickable to open the image modal */
       transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
     }
 
@@ -841,9 +852,9 @@
     .highlight-modal__backdrop {
       position: absolute;
       inset: 0;
-      background: rgba(5, 10, 18, 0.88);
-      backdrop-filter: blur(14px);
-      -webkit-backdrop-filter: blur(14px);
+      background: rgba(5, 10, 18, 0.76);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
       cursor: pointer;
     }
 
@@ -900,14 +911,14 @@
       filter: brightness(0.5) blur(2px);
       transition:
         transform 0.5s cubic-bezier(.25, .46, .45, .94),
-        opacity  0.5s cubic-bezier(.25, .46, .45, .94),
-        filter   0.5s cubic-bezier(.25, .46, .45, .94),
+        opacity 0.5s cubic-bezier(.25, .46, .45, .94),
+        filter 0.5s cubic-bezier(.25, .46, .45, .94),
         box-shadow 0.5s ease;
     }
 
     /* Active (center) slide: full size, sharp, bright — no border/outline */
     .highlightSwiper .swiper-slide-active {
-      transform: scale(1.02);
+      transform: scale(1.10);
       opacity: 1;
       filter: brightness(1) blur(0px);
       /* box-shadow removed: no border or glow on active slide */
@@ -922,18 +933,18 @@
       filter: brightness(0.58) blur(1px);
     }
 
-    /* Image inside each slide — height limited for Google Sites iframe compatibility */
+    /* Image inside each slide — responsive height for desktop vs Google Sites iframe */
     .highlightSwiper .swiper-slide img {
       width: 100%;
-      height: 340px;         /* Fixed height so it fits well inside Google Sites iframe */
-      max-height: 340px;
-      min-height: 180px;
+      height: clamp(300px, 52vh, 550px);
+      /* Scales with screen: ~300px mobile, ~550px large desktop */
       object-fit: cover;
       display: block;
       border-radius: 14px;
       -webkit-user-drag: none;
       user-drag: none;
-      pointer-events: none; /* Prevent image drag from interfering with swiper */
+      pointer-events: none;
+      /* Prevent image drag from interfering with swiper */
     }
 
     /* Caption hidden per user request — titles removed from the UI */
@@ -959,8 +970,13 @@
       transition: background 0.2s ease, transform 0.2s ease;
     }
 
-    .highlightSwiper .swiper-button-prev { left: 16px; }
-    .highlightSwiper .swiper-button-next { right: 16px; }
+    .highlightSwiper .swiper-button-prev {
+      left: 16px;
+    }
+
+    .highlightSwiper .swiper-button-next {
+      right: 16px;
+    }
 
     .highlightSwiper .swiper-button-prev:hover,
     .highlightSwiper .swiper-button-next:hover {
@@ -1007,7 +1023,7 @@
       <p class="eyebrow">Gx. Thánh Phanxicô Xaviê</p>
       <br>
       <h1 class="hero__title">Hừng Đông IX</h1>
-      <p class="hero__subtitle" >MẬT LỆNH BÌNH AN</p>
+      <p class="hero__subtitle">MẬT LỆNH BÌNH AN</p>
       <div class="hero__meta">
         <div class="meta-pill">📅&nbsp; Tiền Sa Mạc đợt 1:&nbsp; 05/07/2026 (13:50 đến 15:40)</div>
         <div class="meta-pill">📅&nbsp; Tiền Sa Mạc đợt 2:&nbsp; 26/07/2026 (13:50 đến 15:40)</div>
@@ -1029,8 +1045,8 @@
       <div class="row g-3">
         <div class="col-12 col-md-4">
           <div class="highlight-card">
-            <img src="https://lh3.googleusercontent.com/d/138pN9aUrUycxfKXLYC8c837m2NaHnD5R" alt="Lửa thiêng &amp; thánh thể"
-              class="highlight-card__img">
+            <img src="https://lh3.googleusercontent.com/d/138pN9aUrUycxfKXLYC8c837m2NaHnD5R"
+              alt="Lửa thiêng &amp; thánh thể" class="highlight-card__img">
             <div class="highlight-card__body">
               <div class="ico">🔥</div>
               <h3>Lửa thiêng &amp; thánh thể</h3>
@@ -1245,129 +1261,106 @@
 
     <!-- Swiper carousel content area -->
     <div class="highlight-modal__content" id="modalContent">
-      <div class="swiper highlightSwiper" id="highlightSwiper">
+
+      <!-- ===== SWIPER GROUP 0: Lửa Thiêng & Thánh Thể (9 slides) ===== -->
+      <!-- Shown when Card 0 is clicked; hidden by default via CSS -->
+      <div class="swiper highlightSwiper swiper-group" id="swiperGroup0">
         <div class="swiper-wrapper">
-
-          <!-- ===== GROUP 1: Lửa Thiêng & Thánh Thể (slides 0–8) ===== -->
-          <!-- Card 0 click → jumps to slide index 0 -->
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1f2NWS5Z72RGZt8SJpaifx5FUlzf7fHYO" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1LTmumYDTXRLDbXg16Tq3T6MJHGT-arzc" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/11NA4VDUvGZIfBwmr-L4rfSvjUV8-Hv4U" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/13NuJeBVCjGp9pfsXuqJ6fqrEVcTHWE6I" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1Vs_TYvUPkc5rKZ2cKjkSlzXOVqKHkgic" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1oIuJLFs7DGyZ_-LcRx7xKBoykqOfuSwG" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/19Aany77c-ARNRB2fM6ECoCbAuflC5H2S" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1sT0AGbY51VtV7PZZkdvZVwocTF-6K-G-" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/18roSdRUXfcTJikqzMeYfHnsEHFfqmzvI" alt="Lửa Thiêng & Thánh Thể" loading="lazy">
-          </div>
-
-          <!-- ===== GROUP 2: Học Tập & Rèn Luyện (slides 9–18) ===== -->
-          <!-- Card 1 click → jumps to slide index 9 -->
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1J8V3E4CqLAraJcLeHUisruukwT0gh2dx" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1uo4LDo7CrsvKojD5cFPdci94OINhb4ps" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1JQ39uIwhN7QhF5OVeHDSi5dGkhdom0Nm" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1iW0pbQ45zAzzY1d8VGSvmWOOpBeV3tpz" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1VwUubRIMZOT27hUPiN_0VSYnqFxwo6Yq" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/11uDSTmLfAms1_p3wjTtttsRTWy84RPhC" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1Yd5T95fC-05h0b-y-E5ZWHKlD8hR0bmj" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1ntjZen1GreMTa8IrZs5Xv520804ZR2li" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1xJly5kDf4otmGgIKnnAyRSg9aoHxVas7" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/138pN9aUrUycxfKXLYC8c837m2NaHnD5R" alt="Học Tập & Rèn Luyện" loading="lazy">
-          </div>
-
-          <!-- ===== GROUP 3: Hoạt Động & Thử Thách (slides 19–33) ===== -->
-          <!-- Card 2 click → jumps to slide index 19 -->
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1DDUPjooRkdNOCfqRqGCBKkHl_O1kkBkb" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1kOUp6XoqWgny8a80JilSfw2KbPe7DbGY" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/13V0Dir9dOzJWWbXRa1orBin9cjZSJJdm" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1UJZ7FBQCk7NnWJ6zjgKxeFw4tSQ8Ws2T" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1LB_Q_QgiblntkoA1gCyiFUtz52MtNHOb" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1kysnyTDHFWlUgxAa9SV7F_PfC4nNUjj1" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1oHTJ-jLtEQbttds3oDuzJyCiX2lra5i3" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1KgAuBRt6QqTbmHe5yjf5_TOIAoBlrjsQ" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1860lG4M3DiqQGaxPWVH7Xiiig0tQO_75" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1HbNPWKo5YkOSAnNlvTIcKJSBp6EVN3wF" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1wP9wQH_OJEaiFaF1JStnSZ10qNjYy7gC" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/15r1EfuPJEHotMLQt_MoG3oGTZ7S97IRC" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1-f3-HYz9wa0HRZD4cr-b4PPBjX2tFz-X" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/140LFs-ig0RHePHcFeFc5dcWI4C-1Ktlx" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-          <div class="swiper-slide">
-            <img src="https://lh3.googleusercontent.com/d/1xdFKhNivwR0aGM8tVTAh2iYHeYx6qq3M" alt="Hoạt Động & Thử Thách" loading="lazy">
-          </div>
-
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1f2NWS5Z72RGZt8SJpaifx5FUlzf7fHYO"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1LTmumYDTXRLDbXg16Tq3T6MJHGT-arzc"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/11NA4VDUvGZIfBwmr-L4rfSvjUV8-Hv4U"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/13NuJeBVCjGp9pfsXuqJ6fqrEVcTHWE6I"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1Vs_TYvUPkc5rKZ2cKjkSlzXOVqKHkgic"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1oIuJLFs7DGyZ_-LcRx7xKBoykqOfuSwG"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/19Aany77c-ARNRB2fM6ECoCbAuflC5H2S"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1sT0AGbY51VtV7PZZkdvZVwocTF-6K-G-"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/18roSdRUXfcTJikqzMeYfHnsEHFfqmzvI"
+              alt="Lửa Thiêng & Thánh Thể" loading="lazy"></div>
         </div>
-        <!-- Swiper navigation arrows -->
         <div class="swiper-button-prev"></div>
         <div class="swiper-button-next"></div>
-        <!-- Swiper pagination dots -->
-        <div class="swiper-pagination"></div>
       </div>
+
+      <!-- ===== SWIPER GROUP 1: Học Tập & Rèn Luyện (10 slides) ===== -->
+      <!-- Shown when Card 1 is clicked; hidden by default via CSS -->
+      <div class="swiper highlightSwiper swiper-group" id="swiperGroup1">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1J8V3E4CqLAraJcLeHUisruukwT0gh2dx"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1uo4LDo7CrsvKojD5cFPdci94OINhb4ps"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1JQ39uIwhN7QhF5OVeHDSi5dGkhdom0Nm"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1iW0pbQ45zAzzY1d8VGSvmWOOpBeV3tpz"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1VwUubRIMZOT27hUPiN_0VSYnqFxwo6Yq"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/11uDSTmLfAms1_p3wjTtttsRTWy84RPhC"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1Yd5T95fC-05h0b-y-E5ZWHKlD8hR0bmj"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1ntjZen1GreMTa8IrZs5Xv520804ZR2li"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1xJly5kDf4otmGgIKnnAyRSg9aoHxVas7"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/138pN9aUrUycxfKXLYC8c837m2NaHnD5R"
+              alt="Học Tập & Rèn Luyện" loading="lazy"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
+      <!-- ===== SWIPER GROUP 2: Hoạt Động & Thử Thách (15 slides) ===== -->
+      <!-- Shown when Card 2 is clicked; hidden by default via CSS -->
+      <div class="swiper highlightSwiper swiper-group" id="swiperGroup2">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1DDUPjooRkdNOCfqRqGCBKkHl_O1kkBkb"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1kOUp6XoqWgny8a80JilSfw2KbPe7DbGY"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/13V0Dir9dOzJWWbXRa1orBin9cjZSJJdm"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1UJZ7FBQCk7NnWJ6zjgKxeFw4tSQ8Ws2T"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1LB_Q_QgiblntkoA1gCyiFUtz52MtNHOb"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1kysnyTDHFWlUgxAa9SV7F_PfC4nNUjj1"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1oHTJ-jLtEQbttds3oDuzJyCiX2lra5i3"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1KgAuBRt6QqTbmHe5yjf5_TOIAoBlrjsQ"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1860lG4M3DiqQGaxPWVH7Xiiig0tQO_75"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1HbNPWKo5YkOSAnNlvTIcKJSBp6EVN3wF"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1wP9wQH_OJEaiFaF1JStnSZ10qNjYy7gC"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/15r1EfuPJEHotMLQt_MoG3oGTZ7S97IRC"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1-f3-HYz9wa0HRZD4cr-b4PPBjX2tFz-X"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/140LFs-ig0RHePHcFeFc5dcWI4C-1Ktlx"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+          <div class="swiper-slide"><img src="https://lh3.googleusercontent.com/d/1xdFKhNivwR0aGM8tVTAh2iYHeYx6qq3M"
+              alt="Hoạt Động & Thử Thách" loading="lazy"></div>
+        </div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+
     </div>
   </div>
+
+
 
   <!-- SwiperJS library for the infinite-loop highlight image carousel -->
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -1468,77 +1461,80 @@
 
   <!-- ===================== HIGHLIGHT MODAL INIT (separate script to isolate from form errors) ===================== -->
   <script>
-  // Initializes the image modal triggered by clicking highlight section cards.
-  // Uses SwiperJS for smooth infinite-loop carousel with 3D depth-recess effect.
-  (function () {
-    const modal    = document.getElementById('highlightModal');
-    const backdrop = document.getElementById('modalBackdrop');
-    const closeBtn = document.getElementById('modalCloseBtn');
-    const content  = document.getElementById('modalContent');
-    const cards    = document.querySelectorAll('.highlight-card');
+    // Initializes the image modal triggered by clicking highlight section cards.
+    // Uses SwiperJS for smooth infinite-loop carousel with 3D depth-recess effect.
+    (function () {
+      const modal = document.getElementById('highlightModal');
+      const backdrop = document.getElementById('modalBackdrop');
+      const closeBtn = document.getElementById('modalCloseBtn');
+      const content = document.getElementById('modalContent');
+      const cards = document.querySelectorAll('.highlight-card');
 
-    // Initialize SwiperJS carousel
-    // slidesPerView: 1.5 with centeredSlides means each side shows exactly 25% of a slide
-    const highlightSwiper = new Swiper('#highlightSwiper', {
-      loop: true,               // Infinite loop: wraps around at first/last slide
-      centeredSlides: true,     // Keep the active slide horizontally centered
-      slidesPerView: 1.5,       // 1 full center slide + 2 sides each showing 25%
-      spaceBetween: 24,
-      speed: 520,               // Transition duration in ms (smooth feel)
-      grabCursor: true,         // Show grab cursor on desktop for drag hint
-      keyboard: { enabled: true },   // Left / right arrow key navigation
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      breakpoints: {
-        // Tablet: slightly wider sides
-        768: { slidesPerView: 1.6, spaceBetween: 32 },
-        // Desktop: even more of the side slides are visible
-        1200: { slidesPerView: 1.78, spaceBetween: 40 },
-      },
-    });
-
-    // Map each highlight card to the first slide index of its photo group:
-    // Card 0 (Lửa Thiêng) → slides 0–8  |  Card 1 (Học Tập) → slides 9–18  |  Card 2 (Hoạt Động) → slides 19–33
-    const cardStartIndices = [0, 9, 19];
-    cards.forEach(function (card, idx) {
-      card.addEventListener('click', function () {
-        const startSlide = cardStartIndices[idx] !== undefined ? cardStartIndices[idx] : 0;
-        highlightSwiper.slideToLoop(startSlide, 0); // Jump without animation before modal opens
-        modal.classList.add('is-open');
-        document.body.style.overflow = 'hidden'; // Lock background scroll
+      // Initialize 3 separate Swiper instances — one per highlight card group.
+      // Each swiper finds its own navigation buttons via querySelector scoped to its container element.
+      const swiperGroupIds = ['swiperGroup0', 'swiperGroup1', 'swiperGroup2'];
+      const swiperInstances = swiperGroupIds.map(function (id) {
+        const el = document.getElementById(id);
+        return new Swiper(el, {
+          loop: true,             // Infinite loop: wraps around at first/last slide
+          centeredSlides: true,   // Keep active slide horizontally centered
+          slidesPerView: 1.32,    // Wider center slide for a more prominent view
+          spaceBetween: 24,
+          speed: 520,             // Transition duration in ms (smooth feel)
+          grabCursor: true,       // Show grab cursor on desktop for drag hint
+          keyboard: { enabled: true },  // Left / right arrow key navigation
+          navigation: {
+            // Scope nav buttons to this swiper's own container element to avoid cross-swiper conflicts
+            prevEl: el.querySelector('.swiper-button-prev'),
+            nextEl: el.querySelector('.swiper-button-next'),
+          },
+          breakpoints: {
+            // Tablet: slightly wider view
+            768: { slidesPerView: 1.4, spaceBetween: 32 },
+            // Large desktop: show more of the side slides
+            1200: { slidesPerView: 1.55, spaceBetween: 40 },
+          },
+        });
       });
-    });
 
-    // Helper: close the modal and restore page scroll
-    function closeHighlightModal() {
-      modal.classList.remove('is-open');
-      document.body.style.overflow = '';
-    }
+      // Card 0 → swiperGroup0 (Lửa Thiêng), Card 1 → swiperGroup1 (Học Tập), Card 2 → swiperGroup2 (Hoạt Động)
+      cards.forEach(function (card, idx) {
+        card.addEventListener('click', function () {
+          // Show only the swiper group matching the clicked card; hide the others
+          document.querySelectorAll('.swiper-group').forEach(function (g, i) {
+            g.style.display = (i === idx) ? 'block' : 'none';
+          });
+          // Reset the shown swiper to its first slide
+          if (swiperInstances[idx]) swiperInstances[idx].slideToLoop(0, 0);
+          modal.classList.add('is-open');
+          document.body.style.overflow = 'hidden'; // Lock background scroll
+        });
+      });
 
-    // Close when clicking on the blurred backdrop (outside the carousel)
-    backdrop.addEventListener('click', closeHighlightModal);
-
-    // Prevent clicks inside the carousel content from bubbling up to the backdrop
-    content.addEventListener('click', function (e) {
-      e.stopPropagation();
-    });
-
-    // Close on the X button
-    closeBtn.addEventListener('click', closeHighlightModal);
-
-    // Close when pressing the Escape key
-    document.addEventListener('keydown', function (e) {
-      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
-        closeHighlightModal();
+      // Helper: close the modal and restore page scroll
+      function closeHighlightModal() {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
       }
-    });
-  })();
+
+      // Close when clicking on the blurred backdrop (outside the carousel)
+      backdrop.addEventListener('click', closeHighlightModal);
+
+      // Prevent clicks inside the carousel content from bubbling up to the backdrop
+      content.addEventListener('click', function (e) {
+        e.stopPropagation();
+      });
+
+      // Close on the X button
+      closeBtn.addEventListener('click', closeHighlightModal);
+
+      // Close when pressing the Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+          closeHighlightModal();
+        }
+      });
+    })();
   </script>
 </body>
 
