@@ -1,0 +1,1468 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hừng Đông IX — Mật Lệnh Bình An</title>
+
+  <meta name="description" content="Register your product warranty quickly and easily with Blueport.">
+
+  <meta property="og:title" content="Hừng Đông IX — Mật Lệnh Bình An">
+  <meta property="og:description" content="Sa mạc">
+  <meta property="og:image" content="https://lh3.googleusercontent.com/d/1yFlmj2W8BQt0PSenXdyj-G37IuCK652L">
+
+  <!-- Google Fonts & Bootstrap -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css">
+
+  <!-- SwiperJS CSS: used for the infinite highlight image carousel modal -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <style>
+    :root {
+      --navy-950: #0A1322;
+      --navy-900: #0F1E33;
+      --navy-800: #152944;
+      --navy-700: #1E3A63;
+      --navy-600: #2A4D80;
+      --gold-500: #D4AF37;
+      --gold-400: #E3C667;
+      --gold-300: #F0DFA8;
+      --parchment-100: #F5EEDC;
+      --parchment-200: #EADFC0;
+      --parchment-300: #DCCDA0;
+      --ink-900: #1C2A3D;
+      --ink-600: #48576C;
+      --stamp-red: #A23B2E;
+      --font-display: 'Oswald', sans-serif;
+      --font-body: 'Inter', sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: var(--navy-950);
+      color: #E9EEF6;
+      font-family: var(--font-body);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    .container-narrow {
+      max-width: 1140px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    @media (max-width: 576px) {
+      .container-narrow {
+        max-width: none;
+      }
+    }
+
+    h1,
+    h2,
+    h3,
+    .font-display {
+      font-family: var(--font-display);
+      text-transform: uppercase;
+      letter-spacing: .02em;
+    }
+
+    :focus-visible {
+      outline: 3px solid var(--gold-400);
+      outline-offset: 2px;
+    }
+
+    /* ===================== HERO SECTION ===================== */
+    .hero {
+      position: relative;
+      overflow: hidden;
+      padding: 56px 0 0;
+      background:
+        radial-gradient(ellipse 120% 60% at 50% -10%, rgba(212, 175, 55, .14), transparent 60%),
+        radial-gradient(ellipse 80% 60% at 90% 10%, rgba(42, 77, 128, .5), transparent 55%),
+        linear-gradient(180deg, var(--navy-900) 0%, var(--navy-950) 75%);
+    }
+
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image: repeating-linear-gradient(115deg, rgba(212, 175, 55, .05) 0 1px, transparent 1px 64px);
+      pointer-events: none;
+    }
+
+    .compass {
+      position: absolute;
+      top: -40px;
+      right: -60px;
+      width: 260px;
+      height: 260px;
+      border: 1.5px solid rgba(212, 175, 55, .18);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .compass::before,
+    .compass::after {
+      content: "";
+      position: absolute;
+      background: rgba(212, 175, 55, .18);
+    }
+
+    .compass::before {
+      top: 50%;
+      left: 6%;
+      right: 6%;
+      height: 1px;
+    }
+
+    .compass::after {
+      left: 50%;
+      top: 6%;
+      bottom: 6%;
+      width: 1px;
+    }
+
+    .crest {
+      width: 84px;
+      height: 84px;
+      border-radius: 50%;
+      margin: 0 auto 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: conic-gradient(from 210deg, #2A4D80, #0A1322 40%, #6B2E5C 55%, #2A4D80 75%);
+      border: 3px solid var(--gold-500);
+      box-shadow: 0 0 0 5px rgba(212, 175, 55, .12);
+      overflow: hidden;
+    }
+
+    .crest img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .eyebrow {
+      text-align: center;
+      color: var(--gold-400);
+      font-weight: 600;
+      font-size: .82rem;
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .hero__title {
+      text-align: center;
+      font-size: clamp(2.4rem, 7vw, 4.4rem);
+      line-height: 1.04;
+      font-weight: 700;
+      color: var(--gold-400);
+      margin: 0 0 6px;
+      text-shadow: 0 2px 0 rgba(0, 0, 0, .35);
+    }
+
+    .hero__subtitle {
+      text-align: center;
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: .1em;
+      color: #CFE0F5;
+      font-size: clamp(2.0rem, 2.7vw, 1.75rem);
+      margin-bottom: 26px;
+    }
+
+    .hero__meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      justify-content: center;
+      margin-bottom: 30px;
+    }
+
+    .meta-pill {
+      background: rgba(255, 255, 255, .06);
+      border: 1px solid rgba(212, 175, 55, .35);
+      border-radius: 999px;
+      padding: 8px 16px;
+      font-size: .88rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      color: #EFE6CB;
+    }
+
+    .perforation {
+      position: relative;
+      height: 0;
+      border-top: 2px dashed rgba(212, 175, 55, .45);
+      max-width: 1100px;
+      margin: 0 auto;
+    }
+
+    .perforation .scissor {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: var(--navy-950);
+      color: var(--gold-400);
+      padding: 0 12px;
+      font-size: 1rem;
+    }
+
+    .perforation::before,
+    .perforation::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background: var(--navy-950);
+      transform: translateY(-50%);
+    }
+
+    .perforation::before {
+      left: -9px;
+    }
+
+    .perforation::after {
+      right: -9px;
+    }
+
+    /* ===================== HIGHLIGHTS SECTION ===================== */
+    .highlights {
+      background: var(--navy-950);
+      padding: 46px 0 10px;
+    }
+
+    .highlight-card {
+      background: var(--navy-900);
+      border: 1px solid var(--navy-700);
+      border-radius: 12px;
+      overflow: hidden;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      cursor: pointer; /* Cards are clickable to open the image modal */
+      transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+    }
+
+    .highlight-card:hover {
+      transform: translateY(-4px);
+      border-color: var(--gold-400);
+      box-shadow: 0 8px 20px rgba(212, 175, 55, .15);
+    }
+
+    .highlight-card__img {
+      width: 100%;
+      height: 160px;
+      object-fit: cover;
+      border-bottom: 1px solid var(--navy-700);
+    }
+
+    .highlight-card__body {
+      padding: 22px 18px;
+      flex-grow: 1;
+    }
+
+    .highlight-card .ico {
+      width: 42px;
+      height: 42px;
+      border-radius: 10px;
+      background: rgba(212, 175, 55, .12);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.3rem;
+      margin-bottom: 12px;
+    }
+
+    .highlight-card h3 {
+      font-size: .98rem;
+      color: var(--gold-300);
+      margin: 0 0 6px;
+      letter-spacing: .04em;
+    }
+
+    .highlight-card p {
+      font-size: .88rem;
+      color: #B9C4D4;
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    /* ===================== REGISTER / TICKET SECTION ===================== */
+    .register-section {
+      padding: 54px 0 70px;
+      background: var(--navy-950);
+    }
+
+    .section-heading {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-heading h2 {
+      color: var(--gold-400);
+      font-size: clamp(1.6rem, 4vw, 2.2rem);
+      margin: 0;
+    }
+
+    .section-heading p {
+      color: #AEBBCC;
+      max-width: 560px;
+      margin: 10px auto 0;
+      font-size: .95rem;
+    }
+
+    .ticket {
+      position: relative;
+      background: var(--parchment-100);
+      border-radius: 18px;
+      box-shadow: 0 30px 60px -20px rgba(0, 0, 0, .55);
+      max-width: 100%;
+      overflow: visible;
+    }
+
+    .ticket__tag {
+      position: absolute;
+      top: -16px;
+      left: 28px;
+      background: var(--navy-950);
+      color: var(--gold-400);
+      font-family: var(--font-display);
+      letter-spacing: .1em;
+      font-weight: 600;
+      font-size: .8rem;
+      padding: 8px 16px;
+      border-radius: 8px;
+      border: 1px solid var(--gold-500);
+    }
+
+    .ticket__form-panel {
+      padding: 54px 30px 34px;
+    }
+
+    @media (min-width: 576px) {
+      .ticket__form-panel {
+        padding: 54px 42px 38px;
+      }
+    }
+
+    .field-group {
+      margin-bottom: 30px;
+    }
+
+    .field-group__legend {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: .06em;
+      font-size: .92rem;
+      color: var(--ink-900);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--parchment-300);
+    }
+
+    .field-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 16px 18px;
+      padding: 13px 0;
+      border-bottom: 1px solid rgba(28, 42, 61, .14);
+    }
+
+    .field-row:last-child {
+      border-bottom: none;
+    }
+
+    .field-row label,
+    .two-cell label {
+      font-size: .8rem;
+      font-weight: 600;
+      color: var(--ink-600);
+      text-transform: uppercase;
+      letter-spacing: .04em;
+      margin-bottom: 4px;
+    }
+
+    .field-row>label {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .field-row .field-control {
+      flex: 1 1 100%;
+      min-width: 0;
+    }
+
+    .field-row .req {
+      color: var(--stamp-red);
+      margin-left: 3px;
+    }
+
+    .field-row.two-up {
+      align-items: stretch;
+    }
+
+    .two-cell {
+      flex: 1 1 240px;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .ticket .form-control {
+      background-color: var(--parchment-200);
+      border: 1px solid var(--parchment-300);
+      color: var(--ink-900);
+      border-radius: 7px;
+      padding: 9px 12px;
+      font-size: .95rem;
+    }
+
+    .ticket input.form-control,
+    .ticket .form-select {
+      height: 44px;
+    }
+
+    .ticket .form-select {
+      background-color: var(--parchment-200);
+      border: 1px solid var(--parchment-300);
+      color: var(--ink-900);
+      border-radius: 7px;
+      padding: 9px 36px 9px 12px;
+      font-size: .95rem;
+    }
+
+    .ticket .form-control::placeholder {
+      color: rgba(28, 42, 61, 0.38);
+    }
+
+    .ticket .form-select:invalid {
+      color: rgba(28, 42, 61, 0.38);
+    }
+
+    .ticket .form-select option {
+      color: var(--ink-900);
+    }
+
+    .ticket .form-control:focus,
+    .ticket .form-select:focus {
+      background-color: #FBF6E9;
+      border-color: var(--gold-500);
+      box-shadow: 0 0 0 3px rgba(212, 175, 55, .28);
+    }
+
+    .ticket textarea.form-control {
+      min-height: 78px;
+    }
+
+    .invalid-feedback {
+      font-size: .78rem;
+    }
+
+    .was-validated .form-control:invalid,
+    .was-validated .form-select:invalid {
+      border-color: var(--stamp-red);
+    }
+
+    /* ===================== PAYMENT OPTIONS STYLING ===================== */
+    .payment-container {
+      display: flex;
+      gap: 16px;
+      margin-top: 12px;
+      width: 100%;
+    }
+
+    .payment-option-card {
+      flex: 1;
+      position: relative;
+    }
+
+    .payment-option-card input[type="radio"] {
+      position: absolute;
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .payment-option-card label {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: var(--parchment-200);
+      border: 2px solid var(--parchment-300);
+      border-radius: 10px;
+      padding: 16px;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      height: 100%;
+      color: var(--ink-900);
+      font-weight: 500;
+      margin-bottom: 0;
+    }
+
+    .payment-option-card input[type="radio"]:checked+label {
+      background: #FBF6E9;
+      border-color: var(--gold-500);
+      box-shadow: 0 4px 12px rgba(212, 175, 55, 0.18);
+    }
+
+    .payment-option-card label:hover {
+      border-color: var(--gold-400);
+    }
+
+    .pay-icon {
+      font-size: 1.8rem;
+      margin-bottom: 6px;
+    }
+
+    .pay-title {
+      font-family: var(--font-display);
+      font-weight: 600;
+      font-size: 1rem;
+      color: var(--ink-900);
+      text-transform: uppercase;
+      margin-bottom: 4px;
+    }
+
+    .pay-desc {
+      font-size: 0.78rem;
+      color: var(--ink-600);
+      line-height: 1.4;
+    }
+
+    @media (max-width: 576px) {
+      .payment-container {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .consent-row {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: flex-start;
+      gap: 10px;
+      margin-top: 8px;
+      margin-bottom: 24px;
+      font-size: .86rem;
+      color: var(--ink-600);
+    }
+
+    .consent-row label {
+      flex: 1;
+      cursor: pointer;
+      user-select: none;
+    }
+
+    .consent-row input {
+      margin-top: 3px;
+      width: 17px;
+      height: 17px;
+      accent-color: var(--stamp-red);
+      cursor: pointer;
+    }
+
+    .consent-row .invalid-feedback {
+      flex: 0 0 100%;
+      color: var(--stamp-red);
+      margin-top: 4px;
+      font-size: .78rem;
+    }
+
+    .was-validated .consent-row input:invalid {
+      outline: 2px solid var(--stamp-red);
+      outline-offset: 1px;
+    }
+
+    .was-validated .consent-row input:invalid~.invalid-feedback {
+      display: block;
+    }
+
+    .submit-row {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 576px) {
+      .submit-row {
+        justify-content: center;
+        text-align: center;
+      }
+    }
+
+    .btn-submit {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, var(--gold-400), var(--gold-500));
+      color: var(--navy-950);
+      border: none;
+      border-radius: 8px;
+      padding: 13px 30px;
+      font-size: .92rem;
+      box-shadow: 0 10px 22px -8px rgba(212, 175, 55, .5);
+      cursor: pointer;
+      transition: filter 0.15s ease;
+    }
+
+    .btn-submit:hover {
+      filter: brightness(1.06);
+    }
+
+    .btn-submit:disabled {
+      opacity: .65;
+      cursor: wait;
+    }
+
+    .submit-note {
+      font-size: .78rem;
+      color: #8A7F63;
+    }
+
+    /* Ticket Stub CSS removed because the Live Boarding Pass Stub was deleted */
+
+    .stamp {
+      display: inline-block;
+      border: 2px dashed var(--stamp-red);
+      color: var(--stamp-red);
+      border-radius: 10px;
+      padding: 8px 14px;
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: .07em;
+      font-size: .78rem;
+      transform: rotate(-4deg);
+      transition: all 0.2s ease;
+    }
+
+    .stamp.confirmed {
+      border-color: #3E8E5A;
+      color: #3E8E5A;
+      transform: rotate(-2deg) scale(1.05);
+    }
+
+    /* ===================== FOOTER SECTION ===================== */
+    .footer {
+      background: var(--navy-900);
+      border-top: 1px solid var(--navy-700);
+      padding: 48px 0 28px;
+    }
+
+    .quote-block {
+      display: flex;
+      gap: 18px;
+      align-items: flex-start;
+      max-width: 680px;
+      margin: 0 auto 38px;
+    }
+
+    @media (max-width: 576px) {
+      .quote-block {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 12px;
+      }
+    }
+
+    .avatar-ca {
+      flex: 0 0 56px;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--navy-700);
+      border: 2px solid var(--gold-500);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      color: var(--gold-300);
+      font-weight: 600;
+    }
+
+    .quote-block blockquote {
+      margin: 0;
+      font-size: 1.02rem;
+      color: #E4EAF2;
+      line-height: 1.55;
+      font-style: italic;
+    }
+
+    .quote-block cite {
+      display: block;
+      margin-top: 8px;
+      color: var(--gold-400);
+      font-size: .85rem;
+      font-style: normal;
+    }
+
+    .footer-org {
+      text-align: center;
+      color: #9CAAC0;
+      font-size: .86rem;
+      line-height: 1.7;
+    }
+
+    .footer-org strong {
+      color: #E9EEF6;
+    }
+
+    /* ===================== SUCCESS OVERLAY ===================== */
+    .success-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(10, 19, 34, .78);
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      z-index: 1000;
+      backdrop-filter: blur(4px);
+      border-radius: 18px;
+    }
+
+    .success-overlay.show {
+      display: flex;
+    }
+
+    .success-card {
+      background: var(--parchment-100);
+      border-radius: 16px;
+      max-width: 400px;
+      width: 100%;
+      padding: 34px 28px;
+      text-align: center;
+      color: var(--ink-900);
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+      animation: slideUp 0.3s ease-out;
+    }
+
+    @keyframes slideUp {
+      from {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .success-card h3 {
+      font-family: var(--font-display);
+      color: var(--ink-900);
+      margin: 14px 0 8px;
+      font-size: 1.3rem;
+    }
+
+    .success-card p {
+      font-size: .92rem;
+      color: var(--ink-600);
+      margin-bottom: 18px;
+    }
+
+    .success-card .btn-gold {
+      font-family: var(--font-display);
+      font-weight: 600;
+      letter-spacing: .07em;
+      text-transform: uppercase;
+      background: linear-gradient(180deg, var(--gold-400), var(--gold-500));
+      color: var(--navy-950);
+      border: none;
+      border-radius: 8px;
+      padding: 10px 26px;
+      font-size: .92rem;
+      box-shadow: 0 4px 12px -2px rgba(212, 175, 55, .4);
+      cursor: pointer;
+      transition: filter 0.15s ease, transform 0.1s ease;
+    }
+
+    .success-card .btn-gold:hover {
+      filter: brightness(1.06);
+      transform: translateY(-1px);
+    }
+
+    .success-card .btn-gold:active {
+      transform: translateY(1px);
+    }
+
+    /* ===================== HIGHLIGHT IMAGE MODAL ===================== */
+
+    /* Full-screen modal: hidden by default, fades in with .is-open */
+    .highlight-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s ease;
+    }
+
+    .highlight-modal.is-open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    /* Dark, blurred backdrop rendered behind the carousel */
+    .highlight-modal__backdrop {
+      position: absolute;
+      inset: 0;
+      background: rgba(5, 10, 18, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      cursor: pointer;
+    }
+
+    /* Close (X) button fixed at top-right of the screen */
+    .highlight-modal__close {
+      position: absolute;
+      top: 20px;
+      right: 24px;
+      z-index: 10002;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(212, 175, 55, 0.45);
+      color: var(--gold-400);
+      font-size: 1.7rem;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.22s ease, transform 0.22s ease;
+    }
+
+    .highlight-modal__close:hover {
+      background: rgba(212, 175, 55, 0.22);
+      transform: scale(1.12) rotate(90deg);
+    }
+
+    /* Swiper container wrapper inside the modal */
+    .highlight-modal__content {
+      position: relative;
+      z-index: 10001;
+      width: 100%;
+      max-width: 1300px;
+      padding: 0 0 20px;
+    }
+
+    /* SwiperJS carousel: overflow visible so side slides peek in */
+    .highlightSwiper {
+      width: 100%;
+      padding: 20px 0 60px !important;
+      overflow: visible !important;
+    }
+
+    /* All slides: recessed / dimmed by default (3D depth recess effect) */
+    .highlightSwiper .swiper-slide {
+      position: relative;
+      border-radius: 14px;
+      overflow: hidden;
+      cursor: pointer;
+      transform: scale(0.80);
+      opacity: 0.40;
+      filter: brightness(0.5) blur(2px);
+      transition:
+        transform 0.5s cubic-bezier(.25, .46, .45, .94),
+        opacity  0.5s cubic-bezier(.25, .46, .45, .94),
+        filter   0.5s cubic-bezier(.25, .46, .45, .94),
+        box-shadow 0.5s ease;
+    }
+
+    /* Active (center) slide: full size, sharp, bright, with gold glow */
+    .highlightSwiper .swiper-slide-active {
+      transform: scale(1.02);
+      opacity: 1;
+      filter: brightness(1) blur(0px);
+      box-shadow: 0 28px 64px rgba(0, 0, 0, 0.65), 0 0 0 2px rgba(212, 175, 55, 0.3);
+      z-index: 2;
+    }
+
+    /* Immediate neighbors: slightly recessed to hint 3D depth */
+    .highlightSwiper .swiper-slide-prev,
+    .highlightSwiper .swiper-slide-next {
+      transform: scale(0.86);
+      opacity: 0.52;
+      filter: brightness(0.58) blur(1px);
+    }
+
+    /* Image inside each slide */
+    .highlightSwiper .swiper-slide img {
+      width: 100%;
+      height: 58vh;
+      max-height: 520px;
+      min-height: 220px;
+      object-fit: cover;
+      display: block;
+      border-radius: 14px;
+      -webkit-user-drag: none;
+      user-drag: none;
+      pointer-events: none; /* Prevent image drag from interfering with swiper */
+    }
+
+    /* Caption: gradient overlay at bottom of each slide, only visible when active */
+    .slide-caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(0deg, rgba(10, 19, 34, 0.92) 0%, rgba(10, 19, 34, 0.4) 55%, transparent 100%);
+      color: var(--gold-300);
+      font-family: var(--font-display);
+      font-size: 1.05rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 34px 24px 18px;
+      border-radius: 0 0 14px 14px;
+      opacity: 0;
+      transition: opacity 0.35s ease;
+    }
+
+    .highlightSwiper .swiper-slide-active .slide-caption {
+      opacity: 1;
+    }
+
+    /* Navigation arrows: gold-themed to match the site's aesthetic */
+    .highlightSwiper .swiper-button-prev,
+    .highlightSwiper .swiper-button-next {
+      color: var(--gold-400);
+      background: rgba(10, 19, 34, 0.62);
+      border: 1px solid rgba(212, 175, 55, 0.42);
+      border-radius: 50%;
+      width: 52px;
+      height: 52px;
+      backdrop-filter: blur(6px);
+      top: calc(50% - 30px);
+      transition: background 0.2s ease, transform 0.2s ease;
+    }
+
+    .highlightSwiper .swiper-button-prev { left: 16px; }
+    .highlightSwiper .swiper-button-next { right: 16px; }
+
+    .highlightSwiper .swiper-button-prev:hover,
+    .highlightSwiper .swiper-button-next:hover {
+      background: rgba(212, 175, 55, 0.2);
+      transform: scale(1.1);
+    }
+
+    /* Size the arrow icons to fit inside the circular button */
+    .highlightSwiper .swiper-button-prev::after,
+    .highlightSwiper .swiper-button-next::after {
+      font-size: 1.1rem;
+      font-weight: 800;
+    }
+
+    /* Pagination dot styling */
+    .highlightSwiper .swiper-pagination {
+      bottom: 20px;
+    }
+
+    .highlightSwiper .swiper-pagination-bullet {
+      background: rgba(212, 175, 55, 0.38);
+      opacity: 1;
+      transition: background 0.25s ease, transform 0.25s ease;
+    }
+
+    .highlightSwiper .swiper-pagination-bullet-active {
+      background: var(--gold-400);
+      transform: scale(1.4);
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- ===================== HERO ===================== -->
+  <header class="hero">
+    <div class="compass" aria-hidden="true"></div>
+    <div class="container-narrow">
+      <div class="crest">
+        <!-- Direct image URL converted for external viewing -->
+        <img src="https://lh3.googleusercontent.com/d/1yFlmj2W8BQt0PSenXdyj-G37IuCK652L" alt="Logo">
+      </div>
+      <p class="eyebrow">Xứ Đoàn Carlo Acutis</p>
+      <p class="eyebrow">Gx. Thánh Phanxicô Xaviê</p>
+      <br>
+      <h1 class="hero__title">Hừng Đông IX</h1>
+      <p class="hero__subtitle" >MẬT LỆNH BÌNH AN</p>
+      <div class="hero__meta">
+        <div class="meta-pill">📅&nbsp; Tiền Sa Mạc đợt 1:&nbsp; 05/07/2026 (13:50 đến 15:40)</div>
+        <div class="meta-pill">📅&nbsp; Tiền Sa Mạc đợt 2:&nbsp; 26/07/2026 (13:50 đến 15:40)</div>
+        <div class="meta-pill">📍&nbsp; Địa Điểm:&nbsp; Gx. Thánh Phanxicô Xaviê</div>
+      </div>
+      <div class="perforation" style="width:20%;"><span class="scissor" style="width:30%;"></span></div><br>
+
+      <div class="hero__meta">
+        <div class="meta-pill">📅&nbsp; Sa Mạc:&nbsp; (5:00) 31/07 – (20:00) 02/08/2026</div>
+        <div class="meta-pill">📍&nbsp; Địa Điểm:&nbsp; Gx. Thiện Lộc</div>
+      </div>
+    </div>
+    <div class="perforation"><span class="scissor">✂</span></div>
+  </header>
+
+  <!-- ===================== HIGHLIGHTS ===================== -->
+  <section class="highlights">
+    <div class="container-narrow">
+      <div class="row g-3">
+        <div class="col-12 col-md-4">
+          <div class="highlight-card">
+            <img src="https://lh3.googleusercontent.com/d/138pN9aUrUycxfKXLYC8c837m2NaHnD5R" alt="Lửa thiêng &amp; thánh thể"
+              class="highlight-card__img">
+            <div class="highlight-card__body">
+              <div class="ico">🔥</div>
+              <h3>Lửa thiêng &amp; thánh thể</h3>
+              <p>Cháy hết mình trong đêm lửa thiêng, sưởi ấm thánh thể và giờ chầu thiêng liêng.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="highlight-card">
+            <img src="https://lh3.googleusercontent.com/d/1ntjZen1GreMTa8IrZs5Xv520804ZR2li" alt="Bạn mới, mình mới"
+              class="highlight-card__img">
+            <div class="highlight-card__body">
+              <div class="ico">🤝</div>
+              <h3>Học Tập</h3>
+              <p>Học tập và phát triển kỹ năng mới trong môi trường thân thiện và hỗ trợ.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-md-4">
+          <div class="highlight-card">
+            <img src="https://lh3.googleusercontent.com/d/1xJly5kDf4otmGgIKnnAyRSg9aoHxVas7" alt="Trò chơi lớn"
+              class="highlight-card__img">
+            <div class="highlight-card__body">
+              <div class="ico">⛰️</div>
+              <h3>Hoạt Động</h3>
+              <p>Chinh phục những thử thách giữa thiên nhiên kỳ vĩ cùng cả xứ đoàn.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="register-section" id="dang-ky">
+    <div class="container-narrow">
+      <div class="section-heading">
+        <h2>Đăng Ký Tham Gia</h2>
+        <p>Điền đầy đủ thông tin bên dưới</p>
+      </div>
+
+      <div class="ticket">
+        <span class="ticket__tag">Thiếu nhi</span>
+
+        <div class="ticket__form-panel">
+          <form id="regForm" class="needs-validation" novalidate>
+
+            <div class="field-group">
+              <div class="field-group__legend">Thông tin cá nhân</div>
+
+              <div class="field-row two-up">
+                <div class="two-cell">
+                  <label for="ten_thanh">Tên thánh</label>
+                  <input type="text" class="form-control" id="ten_thanh" placeholder="Vd: Phanxicô">
+                </div>
+                <div class="two-cell">
+                  <label for="ho_ten">Họ và tên<span class="req">*</span></label>
+                  <input type="text" class="form-control" id="ho_ten" placeholder="Nguyễn Văn A" required>
+                  <div class="invalid-feedback">Vui lòng nhập họ và tên.</div>
+                </div>
+              </div>
+
+              <div class="field-row two-up">
+                <div class="two-cell">
+                  <label for="ngay_sinh">Ngày sinh<span class="req">*</span></label>
+                  <input type="date" class="form-control" id="ngay_sinh" required>
+                  <div class="invalid-feedback">Vui lòng chọn ngày sinh.</div>
+                </div>
+                <div class="two-cell">
+                  <label for="gioi_tinh">Giới tính<span class="req">*</span></label>
+                  <select class="form-select" id="gioi_tinh" required>
+                    <option value="" selected disabled>— Chọn —</option>
+                    <option value="Nam">Nam</option>
+                    <option value="Nữ">Nữ</option>
+                  </select>
+                  <div class="invalid-feedback">Vui lòng chọn giới tính.</div>
+                </div>
+              </div>
+
+              <div class="field-row two-up">
+                <div class="two-cell">
+                  <label for="lop">Lớp<span class="req">*</span></label>
+                  <select class="form-select" id="lop" required>
+                    <option value="" selected disabled>— Chọn lớp —</option>
+                    <option value="Thiếu nhi 1">Thiếu nhi 1</option>
+                    <option value="Thiếu nhi 2">Thiếu nhi 2</option>
+                    <option value="Thiếu nhi 3">Thiếu nhi 3</option>
+                    <option value="Bao đồng">Bao đồng</option>
+                    <option value="Vào đời">Vào đời</option>
+                    <option value="Dự trưởng">Dự trưởng</option>
+                  </select>
+                  <div class="invalid-feedback">Vui lòng chọn lớp.</div>
+                </div>
+                <div class="two-cell">
+                  <label for="sdt_ca_nhan">Số điện thoại cá nhân (nếu có)</label>
+                  <input type="tel" class="form-control" id="sdt_ca_nhan" placeholder="09xx xxx xxx"
+                    pattern="^[0-9+\s]{9,12}$">
+                  <div class="invalid-feedback">Số điện thoại chưa hợp lệ.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <div class="field-group__legend">Phụ huynh</div>
+
+              <div class="field-row two-up">
+                <div class="two-cell">
+                  <label for="ph_ten_thanh">Tên thánh phụ huynh</label>
+                  <input type="text" class="form-control" id="ph_ten_thanh" placeholder="Vd: Giuse">
+                </div>
+                <div class="two-cell">
+                  <label for="ph_ho_ten">Họ tên phụ huynh<span class="req">*</span></label>
+                  <input type="text" class="form-control" id="ph_ho_ten" placeholder="Nguyễn Văn B" required>
+                  <div class="invalid-feedback">Vui lòng nhập họ tên phụ huynh.</div>
+                </div>
+              </div>
+
+              <div class="field-row two-up">
+                <div class="two-cell">
+                  <label for="ph_sdt">Số điện thoại phụ huynh<span class="req">*</span></label>
+                  <input type="tel" class="form-control" id="ph_sdt" placeholder="09xx xxx xxx"
+                    pattern="^[0-9+\s]{9,12}$" required>
+                  <div class="invalid-feedback">Số điện thoại chưa hợp lệ.</div>
+                </div>
+                <div class="two-cell">
+                  <label for="ph_dia_chi">Địa chỉ hiện tại<span class="req">*</span></label>
+                  <input type="text" class="form-control" id="ph_dia_chi" placeholder="Số nhà, tên đường, phường/xã..."
+                    required>
+                  <div class="invalid-feedback">Vui lòng nhập địa chỉ.</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="field-group">
+              <div class="field-group__legend">Phương thức thanh toán</div>
+              <div class="payment-container">
+                <div class="payment-option-card">
+                  <input type="radio" name="thanh_toan" id="pay_tien_mat" value="Tiền mặt" checked>
+                  <label for="pay_tien_mat">
+                    <span class="pay-icon">💵</span>
+                    <span class="pay-title">Tiền mặt</span>
+                    <span class="pay-desc">Đóng trực tiếp cho Huynh Trưởng phụ trách lớp.</span>
+                  </label>
+                </div>
+                <div class="payment-option-card">
+                  <input type="radio" name="thanh_toan" id="pay_chuyen_khoan" value="Chuyển khoản">
+                  <label for="pay_chuyen_khoan">
+                    <span class="pay-icon">🏦</span>
+                    <span class="pay-title">Chuyển khoản</span>
+                    <span class="pay-desc">Chuyển khoản ngân hàng (Chi tiết sẽ gửi sau).</span>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+            <div class="consent-row">
+              <input type="checkbox" id="dong_y" required>
+              <label for="dong_y">Tôi xác nhận các thông tin trên là chính xác và đồng ý tham gia chuyến đi Hừng Đông
+                IX.</label>
+              <div class="invalid-feedback">Bạn cần tích chọn xác nhận thông tin trước khi gửi đăng ký.</div>
+            </div>
+
+            <div class="submit-row">
+              <button type="submit" class="btn-submit" id="submitBtn">Gửi đăng ký</button>
+              <span class="submit-note">Vé thông hành của bạn sẽ hiển thị đầy đủ thông tin sau khi được xác nhận.</span>
+            </div>
+          </form>
+        </div>
+
+        <div class="success-overlay" id="successOverlay" role="dialog" aria-modal="true">
+          <div class="success-card">
+            <span class="stamp confirmed" style="display: inline-block; margin-bottom: 12px;">Đã xác nhận</span>
+            <h3>Đăng ký thành công!</h3>
+            <p>Vé thông hành của bạn đã được ghi nhận. Quý Trưởng sẽ liên hệ xác nhận trong thời gian sớm nhất.</p>
+            <button class="btn-gold" id="closeSuccess" type="button" style="border:none;">Đóng</button>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section> -->
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer">
+    <div class="container-narrow">
+      <div class="quote-block">
+        <div class="avatar-ca">CA</div>
+        <div>
+          <blockquote>“Tất cả mọi người sinh ra đều là nguyên bản, đừng chết đi như một bản sao.”</blockquote>
+          <cite>_Thánh Carlo Acutis_</cite>
+        </div>
+      </div>
+      <p class="footer-org">
+        <strong>Gx. Thánh Phanxicô Xaviê — Xứ Đoàn Carlo Acutis</strong><br>
+        Mọi thắc mắc về chuyến đi Hừng Đông IX, vui lòng liên hệ quý Trưởng phụ trách.<br>
+        © 2026 Xứ Đoàn Carlo Acutis.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Success overlay moved inside ticket for iframe support -->
+
+  <!-- ===================== HIGHLIGHT IMAGE MODAL ===================== -->
+  <!-- Full-screen modal popup triggered by clicking any highlight card -->
+  <div class="highlight-modal" id="highlightModal" role="dialog" aria-modal="true" aria-label="Xem ảnh sự kiện">
+
+    <!-- Backdrop: darkened blurred overlay; click here to close -->
+    <div class="highlight-modal__backdrop" id="modalBackdrop"></div>
+
+    <!-- Close button (X) at top-right corner -->
+    <button class="highlight-modal__close" id="modalCloseBtn" aria-label="Đóng">&times;</button>
+
+    <!-- Swiper carousel content area -->
+    <div class="highlight-modal__content" id="modalContent">
+      <div class="swiper highlightSwiper" id="highlightSwiper">
+        <div class="swiper-wrapper">
+
+          <!-- Slide 1: Lửa Thiêng & Thánh Thể -->
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1DDUPjooRkdNOCfqRqGCBKkHl_O1kkBkb" alt="Lửa Thiêng &amp; Thánh Thể" loading="lazy">
+            <div class="slide-caption">Lửa Thiêng &amp; Thánh Thể</div>
+          </div>
+
+          <!-- Slide 2: Học Tập & Rèn Luyện -->
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1kOUp6XoqWgny8a80JilSfw2KbPe7DbGY" alt="Học Tập &amp; Rèn Luyện" loading="lazy">
+            <div class="slide-caption">Học Tập &amp; Rèn Luyện</div>
+          </div>
+
+          <!-- Slide 3: Hoạt Động & Thử Thách -->
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/13V0Dir9dOzJWWbXRa1orBin9cjZSJJdm" alt="Hoạt Động &amp; Thử Thách" loading="lazy">
+            <div class="slide-caption">Hoạt Động &amp; Thử Thách</div>
+          </div>
+
+          <!-- Slide 4: Hành Trình Hừng Đông -->
+          <div class="swiper-slide">
+            <img src="https://lh3.googleusercontent.com/d/1UJZ7FBQCk7NnWJ6zjgKxeFw4tSQ8Ws2T" alt="Hành Trình Hừng Đông" loading="lazy">
+            <div class="slide-caption">Hành Trình Hừng Đông</div>
+          </div>
+
+        </div>
+        <!-- Swiper navigation arrows -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+        <!-- Swiper pagination dots -->
+        <div class="swiper-pagination"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SwiperJS library for the infinite-loop highlight image carousel -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"></script>
+  <script>
+    (function () {
+      const form = document.getElementById('regForm');
+      const submitBtn = document.getElementById('submitBtn');
+      const overlay = document.getElementById('successOverlay');
+
+      const tenThanh = document.getElementById('ten_thanh');
+      const hoTen = document.getElementById('ho_ten');
+      const lop = document.getElementById('lop');
+
+      // Google Apps Script Web App Deployment URL
+      // Change this variable to your script's executable deployment URL once deployed.
+      const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbyLjI3NL2RLVLow3MQ2eaSXnZhAgqxbk4L5vgIVWvyysv9RzYkc77N10L60ldHTh-TDrQ/exec';
+
+      // Guard: form element may be commented out in HTML; only attach listeners if it exists
+      if (!form) return;
+
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        e.stopPropagation();
+
+        if (!form.checkValidity()) {
+          form.classList.add('was-validated');
+          return;
+        }
+
+        form.classList.add('was-validated');
+        submitBtn.disabled = true;
+        submitBtn.textContent = 'Đang gửi...';
+
+        // Pack values into the format defined in requirements.md
+        // Health fields are populated with defaults to preserve compatibility with Google Sheet Apps Script
+        const formData = {
+          ten_thanh: tenThanh.value.trim(),
+          ho_ten: hoTen.value.trim(),
+          ngay_sinh: document.getElementById('ngay_sinh').value,
+          gioi_tinh: document.getElementById('gioi_tinh').value,
+          lop: lop.value,
+          sdt_ca_nhan: document.getElementById('sdt_ca_nhan').value.trim() || 'Không',
+          ph_ten_thanh: document.getElementById('ph_ten_thanh').value.trim() || 'Không',
+          ph_ho_ten: document.getElementById('ph_ho_ten').value.trim(),
+          ph_sdt: document.getElementById('ph_sdt').value.trim(),
+          ph_dia_chi: document.getElementById('ph_dia_chi').value.trim(),
+          suc_khoe: 'Không',
+          size_ao: 'N/A',
+          ghi_chu: 'Không',
+          thanh_toan: document.querySelector('input[name="thanh_toan"]:checked').value
+        };
+
+        if (APPS_SCRIPT_URL === 'YOUR_APPS_SCRIPT_WEB_APP_URL_HERE') {
+          // Simulator mode if Apps Script URL is not set yet
+          setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Gửi đăng ký';
+            overlay.classList.add('show');
+          }, 1200);
+          return;
+        }
+
+        // Send POST request directly to the Google Apps Script Web App
+        fetch(APPS_SCRIPT_URL, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(formData)
+        })
+          .then(() => {
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Gửi đăng ký';
+            overlay.classList.add('show');
+          })
+          .catch(err => {
+            console.error('Error submitting form:', err);
+            alert('Gặp lỗi khi kết nối. Hãy đảm bảo bạn đã điền đúng Apps Script URL.');
+            submitBtn.disabled = false;
+            submitBtn.textContent = 'Gửi đăng ký';
+          });
+      });
+
+      // Guard: closeSuccess button may not exist if form section is commented out
+      const closeSuccessBtn = document.getElementById('closeSuccess');
+      if (closeSuccessBtn) {
+        closeSuccessBtn.addEventListener('click', function () {
+          overlay.classList.remove('show');
+          form.reset();
+          form.classList.remove('was-validated');
+        });
+      }
+    })();
+  </script>
+
+  <!-- ===================== HIGHLIGHT MODAL INIT (separate script to isolate from form errors) ===================== -->
+  <script>
+  // Initializes the image modal triggered by clicking highlight section cards.
+  // Uses SwiperJS for smooth infinite-loop carousel with 3D depth-recess effect.
+  (function () {
+    const modal    = document.getElementById('highlightModal');
+    const backdrop = document.getElementById('modalBackdrop');
+    const closeBtn = document.getElementById('modalCloseBtn');
+    const content  = document.getElementById('modalContent');
+    const cards    = document.querySelectorAll('.highlight-card');
+
+    // Initialize SwiperJS carousel
+    // slidesPerView: 1.5 with centeredSlides means each side shows exactly 25% of a slide
+    const highlightSwiper = new Swiper('#highlightSwiper', {
+      loop: true,               // Infinite loop: wraps around at first/last slide
+      centeredSlides: true,     // Keep the active slide horizontally centered
+      slidesPerView: 1.5,       // 1 full center slide + 2 sides each showing 25%
+      spaceBetween: 24,
+      speed: 520,               // Transition duration in ms (smooth feel)
+      grabCursor: true,         // Show grab cursor on desktop for drag hint
+      keyboard: { enabled: true },   // Left / right arrow key navigation
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+      breakpoints: {
+        // Tablet: slightly wider sides
+        768: { slidesPerView: 1.6, spaceBetween: 32 },
+        // Desktop: even more of the side slides are visible
+        1200: { slidesPerView: 1.78, spaceBetween: 40 },
+      },
+    });
+
+    // Open modal and immediately jump (0ms) to the slide matching the clicked card
+    cards.forEach(function (card, idx) {
+      card.addEventListener('click', function () {
+        highlightSwiper.slideToLoop(idx, 0); // Jump without animation before modal opens
+        modal.classList.add('is-open');
+        document.body.style.overflow = 'hidden'; // Lock background scroll
+      });
+    });
+
+    // Helper: close the modal and restore page scroll
+    function closeHighlightModal() {
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    // Close when clicking on the blurred backdrop (outside the carousel)
+    backdrop.addEventListener('click', closeHighlightModal);
+
+    // Prevent clicks inside the carousel content from bubbling up to the backdrop
+    content.addEventListener('click', function (e) {
+      e.stopPropagation();
+    });
+
+    // Close on the X button
+    closeBtn.addEventListener('click', closeHighlightModal);
+
+    // Close when pressing the Escape key
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        closeHighlightModal();
+      }
+    });
+  })();
+  </script>
+</body>
+
+</html>
