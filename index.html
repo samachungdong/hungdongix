@@ -957,7 +957,7 @@
 
     /* Active (center) slide: full size, sharp, bright — no border/outline */
     .highlightSwiper .swiper-slide-active {
-      transform: scale(1.10);
+      transform: scale(1.20);
       opacity: 1;
       filter: brightness(1) blur(0px);
       /* box-shadow removed: no border or glow on active slide */
@@ -967,9 +967,9 @@
     /* Immediate neighbors: slightly recessed to hint 3D depth */
     .highlightSwiper .swiper-slide-prev,
     .highlightSwiper .swiper-slide-next {
-      transform: scale(0.86);
-      opacity: 0.52;
-      filter: brightness(0.58) blur(1px);
+      transform: scale(0.8);
+      opacity: 0.5;
+      filter: brightness(0.5) blur(1px);
     }
 
     /* Image inside each slide — responsive height for desktop vs Google Sites iframe */
@@ -984,6 +984,14 @@
       user-drag: none;
       pointer-events: none;
       /* Prevent image drag from interfering with swiper */
+    }
+
+    @media (min-width: 992px) {
+      .highlightSwiper .swiper-slide img {
+        /* height: 80vh; */
+        min-height: 550px;
+        /* max-height: 800px; */
+      }
     }
 
     /* Caption hidden per user request — titles removed from the UI */
